@@ -1,0 +1,253 @@
+body {
+    background-color: #F4F9F4;
+    text-align: center;
+
+}
+
+div {
+    color: #1b5b55;
+    font-family: 'Arvo', serif;
+    font-family: 'Kanit', sans-serif;
+}
+
+h1 {
+    color: #446f6c;
+    font-family: 'Arvo', serif;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    text-align: center;
+    font-stretch: expanded;
+}
+
+
+/*class attributes */
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0px 150px;
+}
+
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.user-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: bold;
+    color: #5C8D89;
+    margin-bottom: 5px;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"],
+.form-row select {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #80c6c0;
+    border-radius: 4px;
+}
+
+.form-row button {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #5C8D89;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-row input[type="tel"],
+.form-row input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-row button:hover {
+    background-color: #1b5b55;
+}
+
+
+.form-row input[readonly] {
+    background-color: #F4F9F4;
+}
+
+.pre-clinical-history {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F4F9F4;
+}
+
+.pre-clinical-history .form-row {
+    margin-bottom: 20px;
+}
+
+.pre-clinical-history label {
+    font-weight: bold;
+    color: #1b5b55;
+    display: inline-flex;
+    margin-bottom: 5px;
+}
+
+.pre-clinical-history textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.instpart {
+    text-decoration-line: underline;
+}
+
+.hide {
+    display: none;
+}
+
+/*ID attributes */
+#comorbidity {
+    color: #446f6c;
+    font-family: 'Arvo', serif;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    text-align: center;
+
+}
+
+#inst {
+    color: #1f5855;
+    font-family: 'Arvo', serif;
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+#inst1 {
+    color: #1f5855;
+    font-family: 'Arvo', serif;
+    font-family: 'Kanit', sans-serif;
+    font-style: oblique;
+    text-align: center;
+}
+
+#mainques {
+    font-weight: bold;
+    font-size: 22px;
+    font-stretch: semi-expanded;
+    color: #004844;
+}
+
+#btn-asthma {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #5C8D89;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#btn-hypertension {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #5C8D89;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#btn-obesity {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #5C8D89;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#btn-pulmonary-fibrosis {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #5C8D89;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+#next-btn {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #75aba7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: #04322d;
+
+}
+
+#next-btn a {
+    text-decoration: none;
+    color: white;
+
+}
+
+#prev-btn {
+    padding: 8px 12px;
+    font-weight: bold;
+    background-color: #75aba7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+#prev-btn:hover {
+    background-color: #04322d;
+}
+#prev-btn a {
+    text-decoration: none;
+    color: white;
+}

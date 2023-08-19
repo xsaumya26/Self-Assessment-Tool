@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disease Comorbidity score</title>
+  <link rel="icon" href="favicon.ico" />
+</head>
+
+<body>
+  <div id="section-next" class="form-section">
+    <h1 id="comorbidity">Disease Comorbidity score</h1>
+  </div>
+  <h2 id="inst">Instructions-निर्देश:</h2>
+  <p id="inst1">Please mark the severity for any of the given health problems as follow</p>
+  <p id="inst2">कृपया दी गई किसी भी स्वास्थ्य समस्या की गंभीरता को निम्नानुसार चिह्नित करें।
+  </p>
+  <p class="instpart">Mild symptom: 1</p>
+  <p class="instpart">Moderate symptom: 2</p>
+  <p class="instpart">Severe symptom: 3</p>
+  <hr>
+
+  <p id="mainques">Ques.Do you have any of the four diseases?</p>
+  <p>क्या आपको चार में से कोई बीमारी है?</p>
+  <button id="btn-asthma" class="disease-option" onclick="displayasthma()">
+    Asthma-दमा
+  </button>
+  <button id="btn-hypertension" class="disease-option" onclick="displayhypertension()">
+    Hypertension-उच्च रक्तचाप
+  </button>
+  <button id="btn-obesity" class="disease-option" onclick="displayobesity()">
+    Obesity-मोटापा
+  </button>
+  <button id="btn-pulmonary-fibrosis" class="disease-option" onclick="displayfibrosis()">
+    Pulmonary Fibrosis-फेफड़े की तंतुमयता
+  </button>
+
+  <div id="asthma-quest" class="hide flex">
+    <div class="flex">
+      <p>1.Do you take any medications for asthma?</p>
+      <p>क्या आप अस्थमा के लिए कोई दवा लेते हैं?</p>
+      <span>
+        <input type="radio" id="o1" name="asthmamed1" value="HTML" />
+        <label for="o1">Only during asthma attack-केवल अस्थमा के दौरे के दौरान</label>
+      </span>
+      <span>
+        <input type="radio" id="o2" name="asthmamed2" value="HTML" />
+        <label for="o2">Throughout the year-साल भर</label>
+      </span>
+      <span>
+        <input type="radio" id="o3" name="asthmamed3" value="HTML" />
+        <label for="o3">I visited the doc even after taking the medicine-दवा लेने के बाद भी
+          मैं डॉक्टर के पास गया</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>2.In the last year, how many times did you had an asthmatic attack?</p>
+      <p>पिछले वर्ष में आपको कितनी बार दमा का दौरा पड़ा?</p>
+      <span>
+        <input type="radio" id="o4" name="asthmaattack" value="HTML" />
+        <label for="o4">Once-एक बार</label>
+      </span>
+      <span>
+        <input type="radio" id="o5" name="asthmaattack" value="HTML" />
+        <label for="o5">Twice-दो बार</label>
+      </span>
+      <span>
+        <input type="radio" id="o6" name="asthmaattack" value="HTML" />
+        <label for="o6">More than 3 times-3 से अधिक बार</label>
+      </span>
+    </div>
+    <div class="flex">
+      <p>3.During which months of the year you experienced the attack</p>
+      <p>वर्ष के किन महीनों के दौरान आपको हमले का अनुभव हुआ?</p>
+      <span>
+        <input type="radio" id="o7" name="January" value="HTML" />
+        <label for="o7">January</label>
+      </span>
+      <span>
+        <input type="radio" id="o8" name="February" value="HTML" />
+        <label for="o8">February</label>
+      </span>
+      <span>
+        <input type="radio" id="o9" name="March" value="HTML" />
+        <label for="o9">March</label>
+      </span>
+      <span>
+        <input type="radio" id="o11" name="May" value="HTML" />
+        <label for="o11">May</label>
+      </span>
+      <span>
+        <input type="radio" id="o12" name="June" value="HTML" />
+        <label for="o12">June</label>
+      </span>
+      <span>
+        <input type="radio" id="o13" name="July" value="HTML" />
+        <label for="o13">July</label>
+      </span>
+      <span>
+        <input type="radio" id="o14" name="August" value="HTML" />
+        <label for="o14">August</label>
+      </span>
+      <span>
+        <input type="radio" id="o15" name="September" value="HTML" />
+        <label for="o15">September</label>
+      </span>
+      <span>
+        <input type="radio" id="o16" name="October" value="HTML" />
+        <label for="o16">October</label>
+      </span>
+      <span>
+        <input type="radio" id="o17" name="November" value="HTML" />
+        <label for="o17">November</label>
+      </span>
+      <span>
+        <input type="radio" id="o18" name="December" value="HTML" />
+        <label for="o18">December</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>4.How many days did it took for you to come to the normal state?</p>
+      <p>आपको सामान्य अवस्था में आने में कितने दिन लगे?</p>
+      <span>
+        <input type="radio" id="o19" name="asthmastate" value="HTML" />
+        <label for="o19">1-2 days-1-2 दिन</label>
+      </span>
+      <span>
+        <input type="radio" id="o20" name="asthmastate" value="HTML" />
+        <label for="o20">3-5 days-3-5 दिन</label>
+      </span>
+      <span>
+        <input type="radio" id="o21" name="asthmastate" value="HTML" />
+        <label for="o21">More than 5 days-5 दिन से अधिक</label>
+      </span>
+
+    </div>
+  </div>
+  <hr>
+
+  <div id="hypertension-quest" class="hide flex">
+    <div class="flex">
+      <p>1.Do you take any medications for hypertension?</p>
+      <p>क्या आप उच्च रक्तचाप के लिए कोई दवा लेते हैं?</p>
+      <span>
+        <input type="radio" id="o22" name="hypermed1" value="HTML" />
+        <label for="o22">Only during high blood pressure-केवल उच्च रक्तचाप के दौरान</label>
+      </span>
+      <span>
+        <input type="radio" id="o23" name="hypermed2" value="HTML" />
+        <label for="o23">Throughout the year-साल भर</label>
+      </span>
+      <span>
+        <input type="radio" id="o24" name="hypermed3" value="HTML" />
+        <label for="o24">I visited the doc even after taking the medicine-दवा लेने के बाद भी मैं डॉक्टर के पास
+          गया</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>2.In the last year, how many times did you had high blood pressure?</p>
+      <p>पिछले वर्ष में आपको कितनी बार उच्च रक्तचाप हुआ?</p>
+      <span>
+        <input type="radio" id="o25" name="highbloodpressure" value="HTML" />
+        <label for="o25">Once-एक बार</label>
+      </span>
+      <span>
+        <input type="radio" id="o26" name="highbloodpressure" value="HTML" />
+        <label for="o26">Twice-दो बार</label>
+      </span>
+      <span>
+        <input type="radio" id="o27" name="highbloodpressure" value="HTML" />
+        <label for="o27">More than 3 times-3 से अधिक बार</label>
+      </span>
+    </div>
+    <div class="flex">
+      <p>3.During which months of the year you experienced high blood pressure</p>
+      <p>वर्ष के किन महीनों के दौरान आपको हमले का अनुभव हुआ?</p>
+      <span>
+        <input type="radio" id="o28" name="January2" value="HTML" />
+        <label for="o28">January</label>
+      </span>
+      <span>
+        <input type="radio" id="o29" name="February2" value="HTML" />
+        <label for="o29">February</label>
+      </span>
+      <span>
+        <input type="radio" id="o30" name="March2" value="HTML" />
+        <label for="o30">March</label>
+      </span>
+      <span>
+        <input type="radio" id="o31" name="April2" value="HTML" />
+        <label for="o31">April</label>
+      </span>
+      <span>
+        <input type="radio" id="o32" name="May2" value="HTML" />
+        <label for="o32">May</label>
+      </span>
+      <span>
+        <input type="radio" id="o33" name="June2" value="HTML" />
+        <label for="o33">June</label>
+      </span>
+      <span>
+        <input type="radio" id="o34" name="July2" value="HTML" />
+        <label for="o34">July</label>
+      </span>
+      <span>
+        <input type="radio" id="o35" name="August2" value="HTML" />
+        <label for="o35">August</label>
+      </span>
+      <span>
+        <input type="radio" id="o36" name="September2" value="HTML" />
+        <label for="o36">September</label>
+      </span>
+      <span>
+        <input type="radio" id="o37" name="October2" value="HTML" />
+        <label for="o37">October</label>
+      </span>
+      <span>
+        <input type="radio" id="o38" name="November2" value="HTML" />
+        <label for="o38">November</label>
+      </span>
+      <span>
+        <input type="radio" id="o39" name="December2" value="HTML" />
+        <label for="o39">December</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>4.How many days did it took for you to come to the normal state?</p>
+      <p>आपको सामान्य अवस्था में आने में कितने दिन लगे?</p>
+      <span>
+        <input type="radio" id="o40" name="hyperstate" value="HTML" />
+        <label for="o40">1-2 days-1-2 दिन</label>
+      </span>
+      <span>
+        <input type="radio" id="o41" name="hyperstate" value="HTML" />
+        <label for="o41">3-5 days-3-5 दिन</label>
+      </span>
+      <span>
+        <input type="radio" id="o42" name="hyperstate" value="HTML" />
+        <label for="o42">More than 5 days-5 दिन से अधिक</label>
+      </span>
+    </div>
+  </div>
+  <hr>
+
+  <div id="obesity-quest" class="hide flex">
+
+    <div class="flex">
+      <p>1. What is your bmi?</p>
+      <p>आप अपना वजन क्या मानते हैं?</p>
+      <button onclick="calculatebmi()">calculate bmi</button>
+      <span id="bmi-disp"></span>
+
+    </div>
+
+    <div class="flex">
+      <p>2. What do you consider your weight as?</p>
+      <p>आप अपना वजन क्या मानते हैं?</p>
+      <span>
+        <input type="radio" id="o43" name="obesitiystate1" value="HTML" />
+        <label for="o43">Normal Weight-सामान्य वज़न</label>
+      </span>
+      <span>
+        <input type="radio" id="o44" name="obesitiystate2" value="HTML" />
+        <label for="o44">Over Weight-अधिक वजन</label>
+      </span>
+      <span>
+        <input type="radio" id="o45" name="obesitiystate3" value="HTML" />
+        <label for="o45">Obese-मोटा</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>3. Have you ever experienced feelings of guilt or shame related to your eating habits or body weight?</p>
+      <p>क्या आपने कभी अपने खान-पान की आदतों या शरीर के वजन से संबंधित अपराधबोधया शर्म की भावना का अनुभव किया है?</p>
+      <span>
+        <input type="radio" id="o46" name="obesitiyfeel1" value="HTML" />
+        <label for="o46">Rarely or never-शायद ही कभी या कभी नहीं</label>
+      </span>
+      <span>
+        <input type="radio" id="o47" name="obesitiyfeel2" value="HTML" />
+        <label for="o47">Sometimes-कभी-कभी</label>
+      </span>
+      <span>
+        <input type="radio" id="o48" name="obesitiyfeel3" value="HTML" />
+        <label for="o48">Most of the times-ज्यादातर समय</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>4. Do you feel that your weight has negatively impacted your self-esteem or body image?</p>
+      <p>क्या आपको लगता है कि आपके वजन ने आपके आत्म-सम्मान और शारीरिक छवि पर नकारात्मक प्रभाव डाला है?</p>
+      <span>
+        <input type="radio" id="o49" name="obesitiyesteem1" value="HTML" />
+        <label for="o49">Rarely or never-शायद ही कभी या कभी नहीं</label>
+      </span>
+      <span>
+        <input type="radio" id="o50" name="obesitiyesteem2" value="HTML" />
+        <label for="o50">Sometimes-कभी-कभी</label>
+      </span>
+      <span>
+        <input type="radio" id="51" name="obesitiyesteem3" value="HTML" />
+        <label for="o51">Most of the times-ज्यादातर समय</label>
+      </span>
+    </div>
+
+    <div class="flex">
+      <p>5. Do you think you sometimes eat even when you are not hungry?</p>
+      <p>क्या आपको लगता है कि कभी-कभी आप भूख न होने पर भी खाते हैं?</p>
+      <span>
+        <input type="radio" id="o52" name="obesitiyeat1" value="HTML" />
+        <label for="o52">Rarely or never-शायद ही कभी या कभी नहीं</label>
+      </span>
+      <span>
+        <input type="radio" id="o53" name="obesitiyeat2" value="HTML" />
+        <label for="o53">Sometimes-कभी-कभी</label>
+      </span>
+      <span>
+        <input type="radio" id="54" name="obesitiyeat3" value="HTML" />
+        <label for="o54">Most of the times-ज्यादातर समय</label>
+      </span>
+    </div>
+  </div>
+  <div class="logo">
+    <img src="DIPAS logo.png" alt="Logo" />
+  </div>
+
+  <button id="prev-btn" class="previous-button" type="button" onclick="storedata()"><a
+    href="index.html">Previous</a></button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
